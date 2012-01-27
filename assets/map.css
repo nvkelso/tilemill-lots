@@ -1,0 +1,232 @@
+/* ### Lots ### */
+
+/*
+html, body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+*/
+
+.lots-controls {
+  position:absolute;
+  left:10px;
+  top:70px;
+  width:90px;
+  z-index:10;
+  }
+
+.icon.lots-1 { background:url(/assets/tilemill-lots/sprite.png) 0px 0px no-repeat; }
+.icon.lots-2 { background:url(/assets/tilemill-lots/sprite.png) -20px 0px no-repeat; }
+.icon.lots-4 { background:url(/assets/tilemill-lots/sprite.png) -40px 0px no-repeat; }
+.icon.lots-10 { background:url(/assets/tilemill-lots/sprite.png) -60px 0px no-repeat; }
+
+.lots-controls a {
+  padding:0px 4px 0px 5px;
+  width:20px;
+  height:20px;
+  background:url(/assets/tilemill/images/mask-48-90.png);
+  color:#fff;
+  margin-right:1px;
+  float:left;
+  text-align:center;
+  }
+
+.lots-controls a.lots-1 {
+  border-radius:3px 0px 0px 3px;
+  }
+
+.lots-controls a.lots-4 {
+  padding-left:4px;
+  border-radius:0px 3px 3px 0px;
+  }
+
+.lots-controls a.lots-10 {
+  padding-left:4px;
+  border-radius:0px 3px 3px 0px;
+  }
+
+.zoom-display.compact {
+  bottom:0px;
+  right:0px;
+  top:auto;
+  left:auto;
+  border-radius:3px 0px 0px 0px;
+  padding:0px;
+  width:20px;
+  }
+
+.lots.maps-1 .zoom-display.compact { display:none; }
+
+/* general layout assumptions */
+
+.lots.maps-1 div.map {
+    position: absolute;
+    width:100% !important;
+    height:100% !important;   
+    bottom:auto !important;
+    top:0px;
+    left:0px;
+}
+
+.lots.maps-2 div.map {
+    position: absolute;
+    width:50% !important;
+    height:100% !important;   
+    bottom:auto !important;
+    top:0px;
+}
+
+.lots.maps-4 div.map {
+    position: absolute;
+    width:50% !important;
+    height:50% !important;   
+    bottom:auto !important;
+}
+
+
+/* the 2-up version */
+
+.lots.maps-2 #map-0 {
+  left:0px;
+}
+.lots.maps-2 #map-1 {
+  left:50%;
+}
+
+
+/* the 4-up version */
+
+.lots.maps-4 #map-0 {
+  top:0px;
+  left:0%;
+}
+.lots.maps-4 #map-1 {
+  top:0px;
+  left:50%;
+}
+.lots.maps-4 #map-2 {
+  top:50%;
+  left:0px;
+}
+.lots.maps-4 #map-3 {
+  top:50%;
+  left:50%;
+}
+  
+  
+/* the 9-up version */
+
+.lots.maps-10 div.map {
+    position: absolute;
+    width:25% !important;
+    height:25% !important;   
+    bottom:auto !important;
+}
+
+/* Big bits */
+.lots.maps-10 #map-8,
+.lots.maps-10 #map-9 {
+    width:50% !important;
+    height:50% !important;
+    bottom:0px !important;
+}
+
+/* first row has 25% detail */
+.lots.maps-10 #map-0,
+.lots.maps-10 #map-1,
+.lots.maps-10 #map-2,
+.lots.maps-10 #map-3 {
+  top:0px;
+  }
+
+/* 2nd row has 25% detail */
+.lots.maps-10 #map-4,
+.lots.maps-10 #map-5,
+.lots.maps-10 #map-6,
+.lots.maps-10 #map-7 {
+  top:25%;
+  }
+
+/* 3rd row has 50% detail */
+.lots.maps-10 #map-8,
+.lots.maps-10 #map-9 {
+  top:50%;
+  }
+
+/* Left column */
+.lots.maps-10 #map-0,
+.lots.maps-10 #map-4,
+.lots.maps-10 #map-8 {
+  left:0px
+  }
+
+/* 1st middle columns */
+.lots.maps-10 #map-1,
+.lots.maps-10 #map-5 {
+  left: 25%;
+  }
+
+/* 2nd middle columns */
+.lots.maps-10 #map-2,
+.lots.maps-10 #map-6,
+.lots.maps-10 #map-9 {
+  left:50%;
+  }
+
+/* Right column */
+.lots.maps-10 #map-3,
+.lots.maps-10 #map-7 {
+  left:75%;
+  }
+
+
+.lots.maps-2 #map-1 { border-left:1px solid #666; }
+.lots.maps-4 #map-1,
+.lots.maps-4 #map-3 { border-left:1px solid #666; }
+.lots.maps-4 #map-2,
+.lots.maps-4 #map-3 { border-top:1px solid #666; }
+
+/* One-up
+      0   1    */
+
+/* Two-up
+      0   1    */
+
+/* Four-up
+      0   1
+      2   3    */
+      
+/* Six-up -- where the two columns are of different spots. 
+                 0, 2, 4 are one spot. 1, 3, 5 are second.
+      0   1
+      2   3
+      4   5    */
+      
+/* Nine-up -- the big kahuna for showing off all zooms for one spot
+      0   1   2   3
+      4   5   6   7
+      8 - 8   9 - 9
+      8 - 8   9 - 9   */
+      
+.lots.maps-10 #map-1,
+.lots.maps-10 #map-2,
+.lots.maps-10 #map-3,
+.lots.maps-10 #map-5,
+.lots.maps-10 #map-6,
+.lots.maps-10 #map-7,
+.lots.maps-10 #map-9 { 
+    border-left:1px solid #666; 
+}
+
+.lots.maps-10 #map-4,
+.lots.maps-10 #map-5,
+.lots.maps-10 #map-6,
+.lots.maps-10 #map-7,
+.lots.maps-10 #map-8,
+.lots.maps-10 #map-9 { 
+    border-top:1px solid #666; 
+}
+
